@@ -20,5 +20,5 @@ docker run --name demo-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=d
 docker run -p 8080:8080 --name demo-app --link demo-mysql:mysql -d [image name]
 
 
-
+it should work good now.....!!!!!!!!
 
