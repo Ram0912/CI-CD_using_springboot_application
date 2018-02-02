@@ -10,6 +10,6 @@ spring:
         password: demo_pass
         driver-class-name: com.mysql.jdbc.Driver
         
-server:
-     port: 9090
+##server:
+   ##  port: 9090
       
