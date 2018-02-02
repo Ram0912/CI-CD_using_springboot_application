@@ -14,4 +14,6 @@ mvn clean package docker:build
 docker run --name demo-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=demo -e MYSQL_USER=demo_user -e MYSQL_PASSWORD=demo_pass -d mysql:5.6
 docker run -p 8080:8080 --name demo-app --link demo-mysql:mysql -d [image name]
 
+jenkins make some problem 
+
 
