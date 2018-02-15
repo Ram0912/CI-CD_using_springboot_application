@@ -17,17 +17,13 @@ pipeline {
       }
     }
     stage('docker setup') {
-      parallel {
-        stage('docker setup') {
-          steps {
-            bat '@FOR /f "tokens=*" %%i IN (\'docker-machine env --shell cmd default\') DO @%%i'
-          }
-        }
-        stage('docker image build') {
-          steps {
-            bat 'mvn docker:build'
-          }
-        }
+      steps {
+        bat '@FOR /f "tokens=*" %%i IN (\'docker-machine env --shell cmd default\') DO @%%i'
+      }
+    }
+    stage('docker images build') {
+      steps {
+        bat 'mvn docker:build'
       }
     }
   }
