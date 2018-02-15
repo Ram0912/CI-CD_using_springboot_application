@@ -23,7 +23,7 @@ pipeline {
             bat '@FOR /f "tokens=*" %%i IN (\'docker-machine env --shell cmd default\') DO @%%i'
           }
         }
-        stage('') {
+        stage('docker image build') {
           steps {
             bat 'mvn docker:build'
           }
