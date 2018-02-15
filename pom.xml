@@ -78,7 +78,7 @@
                 <configuration>
 				
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-                    <dockerHost>https://192.168.99.100:2376</dockerHost>
+                    <dockerHost>https://192.168.99.102:2376</dockerHost>
                     <dockerCertPath>C:\Users\ramkumar.p\.docker\machine\machines\default</dockerCertPath>
                     <dockerDirectory>src/main/docker</dockerDirectory>
                     <resources>
