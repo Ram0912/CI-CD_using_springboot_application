@@ -6,5 +6,10 @@ pipeline {
         bat 'echo initialise'
       }
     }
+    stage('maven build') {
+      steps {
+        bat 'mvn clean install '
+      }
+    }
   }
 }
