@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        bat 'mvn clean && mvn install'
+        bat 'mvn clean && mvn install && mvn package docker:build'
       }
     }
   }
