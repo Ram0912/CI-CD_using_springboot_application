@@ -65,8 +65,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
                 <configuration>
-				<fork>true</fork>
-                <executable>C:\Program Files\Java\jdk1.8.0_131\bin\javac.exe</executable>
+				<!--<fork>true</fork>
+                <executable>C:\Program Files\Java\jdk1.8.0_131\bin\javac.exe</executable>-->
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                 </configuration>
@@ -78,8 +78,8 @@
                 <configuration>
 				
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-                    <dockerHost>https://192.168.99.102:2376</dockerHost>
-                    <dockerCertPath>C:\Users\ramkumar.p\.docker\machine\machines\default</dockerCertPath>
+                    <dockerHost>https://192.168.1.88:2376</dockerHost>
+                    <!--<dockerCertPath>C:\Users\ramkumar.p\.docker\machine\machines\default</dockerCertPath>-->
                     <dockerDirectory>src/main/docker</dockerDirectory>
                     <resources>
                         <resource>
