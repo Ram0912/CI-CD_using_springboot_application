@@ -4,7 +4,7 @@ pipeline {
     stage('build') {
       steps {
         sh '''export DOCKER_HOST=unix:///var/run/docker.sock
-mvn clean package docker:build
+sudo mvn clean package docker:build
 '''
       }
     }
