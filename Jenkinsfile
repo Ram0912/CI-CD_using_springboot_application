@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh '''mvn clean package docker:build
+        sh '''DOCKER_HOST=unix:///var/run/docker.sock mvn clean package docker:build
 
 '''
       }
