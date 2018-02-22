@@ -9,9 +9,9 @@ pipeline {
 '''
       }
     }
-    stage('') {
+    stage('error') {
       steps {
-        sh 'docker build -t sample-rest'
+        sh 'docker build -t sample-rest .'
       }
     }
   }
