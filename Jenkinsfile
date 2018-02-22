@@ -4,8 +4,8 @@ pipeline {
     stage('build') {
       steps {
         sh '''mvn clean install package
-docker rmi -f etms-rest
-docker build -t etms-rest
+sudo docker rmi -f etms-rest
+sudo docker build -t etms-rest
 
 '''
       }
