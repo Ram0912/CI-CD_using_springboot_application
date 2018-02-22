@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh '''DOCKER_HOST=unix:///var/run/docker.sock mvn clean package docker:build
+        sh '''mvn clean install package
+docker rmi -f etms-rest
+docker build -t etms-rest
 
 '''
       }
