@@ -9,9 +9,14 @@ pipeline {
 '''
       }
     }
-    stage('error') {
+    stage('Image building ') {
       steps {
         sh 'docker build -t sample-rest .'
+      }
+    }
+    stage('') {
+      steps {
+        slackSend(message: 'build of sample demo is ready', channel: '#sample', color: 'green', failOnError: true)
       }
     }
   }
