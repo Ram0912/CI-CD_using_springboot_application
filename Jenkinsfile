@@ -7,6 +7,7 @@ pipeline {
 
 
 '''
+        git(url: 'https://github.com/Ram0912/CI-CD_using_springboot_application.git', branch: 'ubuntu-blue', changelog: true, poll: true)
       }
     }
     stage('Image building ') {
